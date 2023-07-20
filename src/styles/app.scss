@@ -1,0 +1,215 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+@keyframes logo {
+  from {
+    transform: translateX(-2rem);
+  }
+
+  to {
+    transform: translateX(2rem);
+  }
+}
+
+* {
+  padding: 0%;
+  margin: 0%;
+  font-family: "Roboto", sans-serif, "Noto Sans";
+  box-sizing: border-box;
+}
+
+#weather {
+  display: grid;
+  flex-direction: row;
+  grid-template-columns: 5fr 3fr;
+  background-image: url(../assets/bg.jpg);
+  background-size: cover;
+
+  section:first-of-type {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url(../assets/bgwall.jpg);
+    background-size: cover;
+    justify-content: center;
+    border-radius: 0 2rem 2rem 0;
+    > div:first-of-type {
+      position: absolute;
+      left: 5%;
+      top: 5%;
+      h3:first-of-type {
+        font: 600 2rem "Roboto";
+      }
+    }
+    > div {
+      margin: 1rem;
+      > h3:last-of-type {
+        text-align: center;
+        justify-content: center;
+      }
+    }
+    > div:last-of-type {
+      display: flex;
+      justify-content: center;
+      > input {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        border-radius: 1rem;
+        border: none;
+        height: 2rem;
+        width: 40rem;
+        outline: none;
+        background-color: rgba(255, 255, 255, 0.173);
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+      }
+    }
+  }
+
+  section:last-of-type {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    margin: 0rem 1rem 0rem 1rem;
+    > h1 {
+      padding: 0.5rem;
+      font: 400 2rem "Roboto";
+    }
+    > h5 {
+      font-size: 1.5rem;
+      padding: 1rem;
+      text-align: left;
+    }
+    > div {
+      width: 100%;
+      height: auto;
+      display: grid;
+      background-color: rgba(255, 255, 255, 0.388);
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      border-radius: 1rem;
+      overflow: auto;
+      grid-template-columns: 1fr 1fr;
+      > div:first-of-type {
+        margin: auto;
+        > h3 {
+          margin-top: 0.7rem;
+          font: 600 2vw "Roboto";
+        }
+        > h2 {
+          background-color: rgb(250, 250, 250);
+          border-radius: 1rem;
+          margin: 1vw;
+          padding: 1rem;
+          font-size: 40px;
+          font-size: 1.3vw;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+        > img {
+          
+          width: 6vw;
+          margin: 0.2rem;
+          animation: logo 3s infinite alternate linear;
+          
+        }
+        > h1 {
+          font-size: 1vw;
+        }
+      }
+      > div:last-of-type {
+        margin: auto;
+       > h1{
+        font-size: 2vw;
+        padding: 0.5rem;
+        }
+      }
+    }
+    > aside {
+      height: 30%;
+      > h3 {
+        margin: 1rem;
+        font: 600 2rem "Roboto";
+        text-align: start;
+      }
+      > div {
+        display: flex;
+          flex-direction: row;
+          text-align: center;
+          background-color: whitesmoke;
+          border-radius: 1rem;
+          width: auto;
+          justify-content: space-between;
+          >div {
+            margin: 2rem;
+            padding: 2rem;
+            width: auto;
+            height: auto;
+            background-color: rgb(255, 255, 255);
+            border-radius: 1rem;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+            >h1 {
+              
+              font-family: system-ui;
+            }
+          }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1270px){
+  #weather{
+    display: flex;
+    flex-direction: column;
+    section:first-of-type{
+      border-radius: 0;
+      height: 50vh;
+      background-size: cover;
+      >div:first-of-type{
+        top: 1vh;
+        left: 1vh;
+      }
+    }
+    >section:last-of-type {
+      height: auto;
+      >div{
+        
+        
+        >div:first-of-type {
+          display: block;
+          text-align: center;
+          >h3{
+            font: 600 2vh "Roboto";
+          }
+          > h2 {
+            font-size: 1.3vh;
+          }
+          > img {
+            width: 6vh;
+          }
+          > h1 {
+            font-size: 2vh;
+          }
+        }
+        > div:last-of-type {
+         
+          >h1 {
+            font-size: 2vh;
+          }
+        }
+      }
+      >aside{
+        > div {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          > div {
+            padding: 1vw;
+            margin: 1vw;
+            
+          }
+        }
+      }
+    }
+  }
+}
